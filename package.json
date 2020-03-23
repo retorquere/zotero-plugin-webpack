@@ -25,7 +25,7 @@
     "test": "test"
   },
   "dependencies": {
-    "@octokit/rest": "^17.1.0",
+    "@octokit/rest": "^17.1.1",
     "@rgrove/parse-xml": "^2.0.2",
     "@types/node": "^13.9.1",
     "@types/webpack": "^4.41.7",
