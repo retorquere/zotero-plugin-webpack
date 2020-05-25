@@ -20,7 +20,9 @@
     "build": "tsc && chmod +x bin/*.js",
     "prepublishOnly": "npm install && npm run build",
     "go": "npm run build && npm version patch && npm publish",
-    "ncu": "ncu -u && npm i && git add package.json package-lock.json && git commit -m ncu"
+    "ncu": "ncu -u && npm i && git add package.json package-lock.json && git commit -m ncu",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "directories": {
     "test": "test"
@@ -58,7 +60,8 @@
     "wrapper-webpack-plugin": "^2.1.0",
     "xml-parser": "^1.2.1",
     "xmldom": "^0.3.0",
-    "xpath": "^0.0.27"
+    "xpath": "^0.0.27",
+    "snyk": "^1.316.1"
   },
   "repository": {
     "type": "git",
@@ -101,5 +104,6 @@
   ],
   "bugs": {
     "url": "https://github.com/retorquere/zotero-plugin/issues"
-  }
+  },
+  "snyk": true
 }
